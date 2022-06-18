@@ -1,0 +1,77 @@
+:root {
+  --main-text: #757575;
+  --secondary-text: #212121;
+  --main-white: #ffffff;
+  --accent: #2196f3;
+  --secondary-accent: #188ce8;
+  --dark-background: #2f303a;
+  --light-background: #f5f4fa;
+  --footer-contact: rgba(255, 255, 255, 0.6);
+  --footer-icon-bg: rgba(255, 255, 255, 0.1);
+  --header-border-color: #ececec;
+  --border-color: #eeeeee;
+  --main-icon-color: #afb1b8;
+  --duration: 250ms;
+  --timing: cubic-bezier(0.4, 0, 0.2, 1);
+}
+*:focus-visible {
+  outline-color: var(--secondary-accent);
+  outline-style: dashed;
+  outline-width: 1px;
+}
+body {
+  font-family: "Roboto", "Open Sans", sans-serif;
+  color: var(--main-text);
+  background-color: var(--main-white);
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  padding-top: 80px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+ul,
+ol {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
