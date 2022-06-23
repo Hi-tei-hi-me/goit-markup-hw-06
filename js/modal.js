@@ -6,6 +6,11 @@
     modal: document.querySelector("[data-modal]"),
   };
 
+  document.documentElement.style.setProperty(
+    "--scrollbar-width",
+    window.innerWidth - document.documentElement.offsetWidth + "px"
+  );
+
   refs.openModalBtn.addEventListener("click", toggleModal);
   refs.closeModalBtn.addEventListener("click", toggleModal);
 
