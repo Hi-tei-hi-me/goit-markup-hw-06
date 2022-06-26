@@ -575,9 +575,6 @@ footer .network-icon:focus {
 .form-field + .form-field {
   margin-top: 10px;
 }
-form .form-field:not(:last-child) {
-  margin-bottom: 10px;
-}
 .field-name {
   margin-bottom: 4px;
   font-size: 12px;
@@ -588,8 +585,7 @@ form .form-field:not(:last-child) {
 .input-wrap {
   position: relative;
 }
-.form-field input,
-.form-field textarea {
+.form-input {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   transition: border var(--duration) var(--timing);
@@ -614,17 +610,19 @@ form .form-field:not(:last-child) {
 }
 .form-field:hover input,
 .form-field:focus input,
+.form-field:focus-within input,
 .form-field:hover textarea,
-.form-field:focus textarea {
+.form-field:focus textarea,
+.form-field:focus-within textarea {
   border: 1px solid var(--accent);
   outline: none;
 }
 .form-field:hover svg,
-.form-field:focus svg {
+.form-field:focus svg,
+.form-field:focus-within svg {
   fill: var(--accent);
 }
-.form-field input::placeholder,
-.form-field textarea::placeholder {
+.form-input::placeholder {
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
@@ -692,5 +690,8 @@ form .form-field:not(:last-child) {
 /*-------------JS-------------*/
 .no-scroll {
   overflow: hidden;
+}
+.no-scroll,
+.no-scroll header {
   padding-right: var(--scrollbar-width);
 }
